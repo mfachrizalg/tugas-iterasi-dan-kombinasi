@@ -15,7 +15,6 @@ int main() {
   if (!(cin >> n) || n <= 0) {
     // Validasi awal agar program tidak lanjut dengan input yang tidak masuk akal
     cout << "Data tidak valid.\n";
-    return 0;
   }
 
   // Penting: untuk bisa dapat median & modus tanpa menyimpan semua data,
