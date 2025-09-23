@@ -1,5 +1,12 @@
 # Tugas Iterasi & Kombinasi (C++)
 
+## Identitas
+- Nama: Muhammad Fachrizal Giffari
+- NIM: 22/504570/TK/55192
+- Mata Kuliah: Pemrograman Dasar
+- Kelas: A
+- Repository: [github.com/mfachrizalg/tugas-iterasi-dan-kombinasi](https://github.com/mfachrizalg/tugas-iterasi-dan-kombinasi)
+
 Proyek C++ sederhana yang berisi dua program konsol:
 - `soal_1`: mencetak n bilangan prima pertama lalu menghitung jumlahnya.
 - `soal_2`: menghitung mean, median, dan modus dari data yang diinput pengguna tanpa menggunakan array (hanya `<iostream>`). Median dan modus valid jika data dimasukkan dalam urutan non-menurun (terurut naik, boleh sama).
@@ -95,4 +102,3 @@ Ringkas logika:
 ## Catatan Tambahan
 - Target CMake: `soal_1` dan `soal_2`. Output binari berada di `bin/` dalam folder build (`build/bin/...`).
 - Anda dapat membuka folder proyek ini di CLion; IDE akan mendeteksi CMake dan menyiapkan target otomatis.
-
