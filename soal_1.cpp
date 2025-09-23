@@ -1,25 +1,42 @@
 #include <iostream>
+#include <cmath>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+using namespace std;
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+  int n;
+  cout << "Berapa banyak bilangan prima yang ingin dicetak? ";
+  cin >> n;
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+  if (n <= 1) {
+    cout << "Tolong cetak lebih dari 1!" << endl;
+    return 0;
+  }
+
+  int sum = 0, count = 0, num = 2;
+
+  cout << n << " deret pertama bilangan prima: ";
+
+  while (count < n) {
+    bool is_prime = num > 1;
+    if (is_prime) {
+      const int limit = static_cast<int>(sqrt(num));
+      for (int i = 2; i <= limit; ++i) {
+        if (num % i == 0) {
+          is_prime = false;
+          break;
+        }
+      }
     }
 
-    return 0;
-}
+    if (is_prime) {
+      cout << num << " ";
+      sum += num;
+      ++count;
+    }
+    ++num;
+  }
 
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
+  cout << endl;
+  cout << "Jumlah dari deret tersebut: " << sum << endl;
+}
